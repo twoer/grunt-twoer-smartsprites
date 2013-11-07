@@ -1,4 +1,4 @@
-grunt-contrib-smartsprite
+grunt-contrib-smartsprites
 =========================
 
 
