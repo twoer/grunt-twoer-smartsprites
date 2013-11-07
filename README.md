@@ -65,7 +65,7 @@ Type: `Function`
 
 ## 感谢：
 * 整个程序大部分都参考了 https://github.com/jharding/grunt-exec
-* waitcat
+* Waitcat
 * TooBug
 * Vincent
 
