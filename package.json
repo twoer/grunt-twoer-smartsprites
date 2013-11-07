@@ -1,18 +1,18 @@
 {
-  "name": "grunt-contrib-smartsprite",
-  "description": "通过 grunt 调用 smartsprite",
+  "name": "grunt-contrib-smartsprites",
+  "description": "通过 grunt 调用 smartsprites",
   "version": "0.0.1",
-  "homepage": "https://github.com/twoer/grunt-contrib-smartsprite",
+  "homepage": "https://github.com/twoer/grunt-contrib-smartsprites",
   "author": {
     "name": "zhangkun",
     "url": "http://cnblogs.com/twoer"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/twoer/grunt-contrib-smartsprite.git"
+    "url": "https://github.com/twoer/grunt-contrib-smartsprites.git"
   },
   "bugs": {
-    "url": "https://github.com/twoer/grunt-contrib-smartsprite/issues"
+    "url": "https://github.com/twoer/grunt-contrib-smartsprites/issues"
   },
   "engines": {
     "node": ">= 0.8.0"
