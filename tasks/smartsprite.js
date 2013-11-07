@@ -27,7 +27,7 @@ module.exports = function(grunt)
         }
         var stdout = data.stdout !== undefined ? data.stdout : true;
         var stderr = data.stderr !== undefined ? data.stderr : true;
-        var cmdPath = data.smartspritePath || path.resolve('') + '/node_modules/grunt-contrib-smartsprite/smartsprites-0.2.9/smartsprites.cmd';
+        var cmdPath = data.smartspritePath || '"' +  path.resolve('') + '/node_modules/grunt-contrib-smartsprite/smartsprites-0.2.9/smartsprites.cmd"';
         var rootPath = path.resolve(data.rootPath);
         var outputPath = path.resolve(data.outputPath);
         var callback = _.isFunction(data.callback) ? data.callback : function() {}
