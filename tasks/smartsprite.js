@@ -8,7 +8,7 @@
 
 'use strict';
 
-module.exports = function(grunt) 
+module.exports = function(grunt)
 {
 
     var path = require('path');
@@ -17,7 +17,7 @@ module.exports = function(grunt)
     var f = require('util').format;
     var log = grunt.log;
 
-    grunt.registerMultiTask('smartsprite', '{%= description %}', function() 
+    grunt.registerMultiTask('smartsprite', '{%= description %}', function()
     {
         var data = this.data;
         if(!data.rootPath || !data.outputPath)
@@ -31,7 +31,8 @@ module.exports = function(grunt)
         var rootPath = path.resolve(data.rootPath);
         var outputPath = path.resolve(data.outputPath);
         var callback = _.isFunction(data.callback) ? data.callback : function() {}
-        var command = command = cmdPath + ' --root-dir-path "' + rootPath + '" --output-dir-path "' + outputPath + '" --css-file-suffix ""';
+        var suffix = data.suffix || "";
+        var command = command = cmdPath + ' --root-dir-path "' + rootPath + '" --output-dir-path "' + outputPath + '" --css-file-suffix ' + suffix;
 
         var done = this.async();
         var childProcess = cp.exec(command, null, callback);
@@ -39,9 +40,9 @@ module.exports = function(grunt)
         stdout && childProcess.stdout.on('data', function (data) { log.error('stdout:' + data) });
         stderr && childProcess.stderr.on('data', function (data) { log.error('stderr:' + data); });
 
-        childProcess.on('exit', function(code) 
+        childProcess.on('exit', function(code)
         {
-            if (code !== 0) 
+            if (code !== 0)
             {
                 log.error(f('Exited with code: %d.', code));
                 return done(false);
@@ -50,7 +51,7 @@ module.exports = function(grunt)
             done();
         });
 
-    
+
     });
 
 
