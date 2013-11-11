@@ -17,6 +17,12 @@ grunt-contrib-smartsprites
 
 
 ## 使用方法：
+
+`npm install grunt-contrib-smartsprites --save-dev`
+
+`grunt.loadNpmTasks('grunt-contrib-smartsprites');`
+
+
 ```js
 //grunt smartsprite
 smartsprite: 
