@@ -31,9 +31,9 @@ module.exports = function(grunt)
         var rootPath = path.resolve(data.rootPath);
         var outputPath = path.resolve(data.outputPath);
         var callback = _.isFunction(data.callback) ? data.callback : function() {}
-        var suffix = data.suffix || "";
+        var suffix = data.cssFileSuffix || '""';
         var command = command = cmdPath + ' --root-dir-path "' + rootPath + '" --output-dir-path "' + outputPath + '" --css-file-suffix ' + suffix;
-
+        
         var done = this.async();
         var childProcess = cp.exec(command, null, callback);
 

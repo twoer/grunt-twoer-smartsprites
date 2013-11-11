@@ -11,6 +11,10 @@ grunt-contrib-smartsprites
 *  nodejs  `不确定，个人环境是 windows v0.10.15 `
 *  nodejs  `~0.4.0`
 
+## 推荐
+
+* 也许你需要这个 https://github.com/twoer/grunt-contrib-less-smartsprites 
+
 
 ## 使用方法：
 ```js
@@ -22,6 +26,7 @@ smartsprite:
         // smartspritePath : 'smartsprites.cmd',
         rootPath: config.src + 'style/source/',
         outputPath: config.src +  'style/',
+        cssFileSuffix: '',
         stdout: true,
         stderr: true,
         callback: function()
@@ -45,6 +50,10 @@ Type: `String`
 #### outputPath
 Type: `String` 
 smartsprite 执行输出 css 文件夹路径
+
+#### cssFileSuffix
+Type: `String` 
+生成的 css 文件后缀
 
 
 #### stdout
