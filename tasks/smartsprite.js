@@ -28,9 +28,9 @@ module.exports = function(grunt) {
         var cmdPath = options.smartspritePath || '"' +  path.resolve('') + '/node_modules/grunt-contrib-smartsprites/smartsprites-0.2.9/smartsprites.cmd"';
         var rootPath = path.resolve(options.rootPath);
         var outputPath = path.resolve(options.outputPath);
-        var callback = _.isFunction(options.callback) ? options.callback : function() {}
+        var callback = _.isFunction(options.callback) ? options.callback : function() {};
         var suffix = options.cssFileSuffix || '""';
-        var command = command = cmdPath + ' --root-dir-path "' + rootPath + '" --output-dir-path "' + outputPath + '" --css-file-suffix ' + suffix;
+        var command = cmdPath + ' --root-dir-path "' + rootPath + '" --output-dir-path "' + outputPath + '" --css-file-suffix ' + suffix;
 
         var done = this.async();
         var childProcess = cp.exec(command, null, callback);
