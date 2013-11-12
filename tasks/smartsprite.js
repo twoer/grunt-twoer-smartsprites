@@ -17,18 +17,19 @@ module.exports = function(grunt) {
     var log = grunt.log;
 
     grunt.registerMultiTask('smartsprite', '{%= description %}', function() {
-        var data = this.data;
-        if(!data.rootPath || !data.outputPath) {
+        var options = this.options({
+            stdout: true,
+            stderr: true
+        });
+        if(!options.rootPath || !options.outputPath) {
             log.error('rootPath or outputPath is null.');
             return;
         }
-        var stdout = data.stdout !== undefined ? data.stdout : true;
-        var stderr = data.stderr !== undefined ? data.stderr : true;
-        var cmdPath = data.smartspritePath || '"' +  path.resolve('') + '/node_modules/grunt-contrib-smartsprites/smartsprites-0.2.9/smartsprites.cmd"';
-        var rootPath = path.resolve(data.rootPath);
-        var outputPath = path.resolve(data.outputPath);
-        var callback = _.isFunction(data.callback) ? data.callback : function() {}
-        var suffix = data.cssFileSuffix || '""';
+        var cmdPath = options.smartspritePath || '"' +  path.resolve('') + '/node_modules/grunt-contrib-smartsprites/smartsprites-0.2.9/smartsprites.cmd"';
+        var rootPath = path.resolve(options.rootPath);
+        var outputPath = path.resolve(options.outputPath);
+        var callback = _.isFunction(options.callback) ? options.callback : function() {}
+        var suffix = options.cssFileSuffix || '""';
         var command = command = cmdPath + ' --root-dir-path "' + rootPath + '" --output-dir-path "' + outputPath + '" --css-file-suffix ' + suffix;
 
         var done = this.async();
