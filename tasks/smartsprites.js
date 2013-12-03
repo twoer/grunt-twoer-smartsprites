@@ -1,5 +1,5 @@
 /*
- * grunt-contrib-smartsprite
+ * grunt-contrib-smartsprites
  * {%= homepage %}
  *
  * Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     var f = require('util').format;
     var log = grunt.log;
 
-    grunt.registerMultiTask('smartsprite', '{%= description %}', function() {
+    grunt.registerMultiTask('smartsprites', '{%= description %}', function() {
         var options = this.options({
             stdout: true,
             stderr: true

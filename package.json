@@ -1,7 +1,7 @@
 {
   "name": "grunt-contrib-smartsprites",
   "description": "通过 grunt 调用 smartsprites",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "homepage": "https://github.com/twoer/grunt-contrib-smartsprites",
   "author": {
     "name": "zhangkun",
